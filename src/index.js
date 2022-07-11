@@ -12,7 +12,7 @@ app.use(cors())
 
 
 
-
+nombre = process.env.NOMBRE || 'Anonimo'
 app.get('/', (req,res)=>{
     res.status(200).json({
         error:false,
@@ -24,5 +24,5 @@ app.get('/', (req,res)=>{
 
 app.listen(process.env.PORT, ()=>{
     console.log('Servidor escuchando en puerto ' + 
-    process.env.PORT + ' del ordenador de ' + NOMBRE);
+    process.env.PORT + ' del ordenador de ' + nombre);
 })
